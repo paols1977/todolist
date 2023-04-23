@@ -1,0 +1,21 @@
+﻿@page
+@model todolist.Pages.Produto1.ConsultarProdutoModel
+@{
+}
+
+<table>
+    <tr>
+        <th>Nome</th>
+        <th>Preço</th>
+        <th>Link</th>
+    </tr>
+    @foreach (var produto in Model.Produtos)
+    {
+        <tr>
+            <td>@produto.Nome</td>
+            <td>@produto.Preco</td>
+            <td>@produto.Link</td>
+        </tr>
+    }
+</table>
+

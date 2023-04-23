@@ -1,0 +1,14 @@
+﻿@page
+@model todolist.Pages.Produto.CriarProdutoModel
+@{
+}
+<form method="POST">
+    <input type="text" name="nome" placeholder="Nome do produto" />
+    <input type="number" name="preco" placeholder="Preço do produto" />
+    <input type="text" name="link" placeholder="Link do produto" />
+    <input type="submit" value="Criar" />
+</form>
+@if (!string.IsNullOrEmpty(ViewData["Mensagem"] as string))
+{
+    <p>@ViewData["Mensagem"]</p>
+}

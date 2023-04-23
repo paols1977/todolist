@@ -1,0 +1,36 @@
+﻿@page
+@model todolist.Pages.Produto.ActualizarProdutoModel
+@{
+}
+
+<table>
+    <tr>
+        <th>Descrição do nome</th>
+        <th>preco</th>
+        <th>link</th>
+    </tr>
+
+    @foreach (var produto in Model.produtos)
+    {
+        <tr>
+            <form method="POST">
+            <td>
+                <input type="hidden" name="nomeAntigo" value="@produto.Nome" />
+                <input type="text" name="nome" value="@produto.Nome" />
+            </td>
+            <td>
+                <input type="number" name="preco" value="@produto.Preco" />
+            </td>
+            <td>
+                <input type="text" name="link" value="@produto.Link" />
+            </td>
+            <td>
+                <input type="submit" value="Guardar" onclick="return confirm('Quer mesmo efectuar a alteração?')" />
+            </td>
+            </form>
+        </tr>
+    }
+</table>
+
+
+
